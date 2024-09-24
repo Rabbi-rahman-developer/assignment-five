@@ -87,11 +87,12 @@ function addToHistory(title, amount) {
         <p>Date: ${date}</p>
     `;
     historyList.prepend(historyCard); 
+     
 }
 
 function displayHistory() {
     if (historyList.children.length === 0) {
-        historyList.innerHTML = `<p>No donation history available.</p>`;
+        historyList.innerHTML = ``;
     }
 }
 
