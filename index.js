@@ -15,12 +15,12 @@ donationButton.addEventListener('click', function() {
 
 historyButton.addEventListener('click', function() {
     toggleVisibility('historySection', 'donationSection', historyButton);
-    displayHistory(); // Display history when the history button is clicked
+    displayHistory(); 
 });
 
 // Blog button click event
 blogButton.addEventListener('click', function() {
-    window.location.href = 'blog.html'; // Change to the desired HTML file
+    window.location.href = 'blog.html'; 
 });
 
 // Donation buttons
@@ -86,7 +86,7 @@ function addToHistory(title, amount) {
         <p>Amount: ${amount} BDT</p>
         <p>Date: ${date}</p>
     `;
-    historyList.prepend(historyCard); // Add new donation at the top of the history list
+    historyList.prepend(historyCard); 
 }
 
 function displayHistory() {
