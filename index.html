@@ -1,22 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment five </title>
-     <!-- tailwind and daisy ui link  -->   
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>assignment five </title>
+        <!-- tailwind and daisy ui link  -->   
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-</head>
-<body class="bg-[#FFFFFF]">
+    </head>
+    <body class="bg-[#FFFFFF]">
+
+    <!-- header section start  -->
+    <header>
+
+        
+
+        <nav class="flex justify-between items-center px-4 lg:px-24 py-4 sticky top-0 z-10 bg-orange-50 bg-opacity-50 backdrop-blur-sm">
+            <button id="blogButton" class="btn px-8 text-xl font-bold text-[#111111] bg-[#B4F461]">Blog</button>
+            <div class="hidden sm:block md:block lg:flex space-x-4">
+                <img src="./assets/logo.png" alt="">
+                <p class="text-xl font-bold">Donate Bangladesh</p>
+            </div>
+            <div class="flex items-center">
+                <img src="./assets/coin.png" alt="">
+                <span id="accountBalance" class="ml-2 font-bold text-xl">5500 BDT</span>
+            </div>
+        </nav>
+        
+
+        
+        <div class="text-center mt-10 space-x-3">
+            
+            <button id="donationButton" class="btn font-bold text-xl bg-[#B4F461]">Donation</button>
+            <button id="historyButton" class="btn font-bold text-xl btn-outline">History</button>
+
+        </div>
+
+
+    </header>
+    <!-- header section end  -->
+
+        
 
 
 
 
-    <script src="index.js"></script>
-</body>
+
+
+        <script src="index.js"></script>
+    </body>
 
 
 
-</html>
+    </html>
