@@ -1,26 +1,21 @@
-
-
 let accountBalance = 5500;
 let historyList = document.getElementById('historyList');
 let accountBalanceDisplay = document.getElementById('accountBalance');
 let modal = document.getElementById('my_modal_5');
-let modalCloseButton = modal.querySelector('.modal-action button');
+let closeModalButton = document.getElementById('closeModalButton');
 
 const donationButton = document.getElementById('donationButton');
 const historyButton = document.getElementById('historyButton');
-const blogButton = document.getElementById('blogButton'); // Reference to Blog button
+const blogButton = document.getElementById('blogButton');
 
-//  click event  using addEventListener
+// Click event using addEventListener
 donationButton.addEventListener('click', function() {
     toggleVisibility('donationSection', 'historySection', donationButton);
 });
 
 historyButton.addEventListener('click', function() {
     toggleVisibility('historySection', 'donationSection', historyButton);
-});
-
-modalCloseButton.addEventListener('click', function() {
-    modal.close();
+    displayHistory(); // Display history when the history button is clicked
 });
 
 // Blog button click event
@@ -46,6 +41,7 @@ function processDonation(card) {
     let donationInput = card.querySelector('input');
     let donationAmount = parseInt(donationInput.value, 10);
     let currentAmountElem = card.querySelector('button span');
+    let currentAmount = parseInt(currentAmountElem.textContent, 10);
     let donationTitle = card.querySelector('p.font-extrabold').textContent;
 
     if (!donationAmount || donationAmount <= 0) {
@@ -58,14 +54,28 @@ function processDonation(card) {
         return;
     }
 
+    // Update the account balance
     accountBalance -= donationAmount;
     accountBalanceDisplay.textContent = accountBalance + " BDT";
-    currentAmountElem.textContent = (parseInt(currentAmountElem.textContent, 10) + donationAmount) + " BDT";
+
+    // Update the total amount on the button
+    currentAmount += donationAmount;
+    currentAmountElem.textContent = currentAmount + " BDT";
+
+    // Add to donation history
+    addToHistory(donationTitle, donationAmount);
+
+    // Clear the input field
     donationInput.value = '';
 
-    addToHistory(donationTitle, donationAmount);
+    // Show the modal after successfully processing the donation
     modal.showModal();
 }
+
+// Close modal
+closeModalButton.addEventListener('click', function() {
+    modal.close();
+});
 
 function addToHistory(title, amount) {
     let date = new Date().toLocaleString();
@@ -76,7 +86,13 @@ function addToHistory(title, amount) {
         <p>Amount: ${amount} BDT</p>
         <p>Date: ${date}</p>
     `;
-    historyList.prepend(historyCard);
+    historyList.prepend(historyCard); // Add new donation at the top of the history list
+}
+
+function displayHistory() {
+    if (historyList.children.length === 0) {
+        historyList.innerHTML = `<p>No donation history available.</p>`;
+    }
 }
 
 function highlightActiveButton(activeButton) {

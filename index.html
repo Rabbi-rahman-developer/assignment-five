@@ -1,181 +1,127 @@
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>assignment five </title>
-            <!-- tailwind and daisy ui link  -->   
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment Five</title>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
-
-        </head>
-        <body class="bg-[#FFFFFF]">
-
-        <!-- header section start  -->
-        <header>
-
-            
-
-            <nav class="flex justify-between items-center px-4 lg:px-24 py-4 sticky top-0 z-10 bg-orange-50 bg-opacity-50 backdrop-blur-sm">
-                <button id="blogButton" class="btn px-8 text-xl font-bold text-[#111111] bg-[#B4F461]">Blog</button>
-                <div class="hidden sm:block md:block lg:flex space-x-4">
-                    <img src="./assets/logo.png" alt="">
-                    <p class="text-xl font-bold">Donate Bangladesh</p>
-                </div>
-                <div class="flex items-center">
-                    <img src="./assets/coin.png" alt="">
-                    <span id="accountBalance" class="ml-2 font-bold text-xl">5500 BDT</span>
-                </div>
-            </nav>
-            
-
-            
-            <div class="text-center mt-10 space-x-3">
-                
-                <button id="donationButton" class="btn font-bold text-xl bg-[#B4F461]">Donation</button>
-                <button id="historyButton" class="btn font-bold text-xl btn-outline">History</button>
-
+    </head>
+    <body class="bg-[#FFFFFF]">
+    <!-- header start  here  -->
+    <header>
+        <nav class="flex justify-between items-center px-4 lg:px-24 py-4 sticky top-0 z-10 bg-orange-100 bg-opacity-50 backdrop-blur-sm">
+            <button id="blogButton" class="btn px-8 text-xl font-bold text-[#111111] bg-[#B4F461]">Blog</button>
+            <div class="hidden sm:block md:block lg:flex space-x-4">
+                <img src="./assets/logo.png" alt="">
+                <p class="text-xl font-bold">Donate Bangladesh</p>
             </div>
-
-
-        </header>
-        <!-- header section end  -->
-
-        <!-- main section start  -->
-            <main>
-                
-        <!-- donation section start  -->
-    <div id="donationSection" class=" p-4 space-y-12 ">
-
-        <div class="bg-white shadow-md p-4 rounded-lg   lg:space-x-8 lg:flex">
-        
-            <div class="">
-                <img class="w-full" src="./assets/noakhali.png" alt="Donation 1" class="w-6/12 h-16 mr-4">
-
-            </div>
-
-            <div class="flex-1 space-y-8 mt-5 lg:mt-0">
-                <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-3">
+            <div class="flex items-center">
                 <img src="./assets/coin.png" alt="">
-                <span>1000 BDT</span>
-                </button>
-                <p class="text-[#111111] font-extrabold">Donate for Flood at Noakhali, Bangladesh</p>
-                <p class="capitalize text-[#111111]"> 
-                    the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
-                </p>
-                <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
-                <button class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
+                <span id="accountBalance" class="ml-2 font-bold text-xl">5500 BDT</span>
+            </div>
+        </nav>
+        
+        <div class="text-center mt-10 space-x-3">
+            <button id="donationButton" class="btn font-bold text-xl bg-[#B4F461]">Donation</button>
+            <button id="historyButton" class="btn font-bold text-xl btn-outline">History</button>
+        </div>
+    </header>
+
+    <!-- header end here  -->
+    <main class="px-4 lg:px-24 lg-py-8">
+
+
+        <div id="donationSection" class="p-4 space-y-12">
+
+            <div class="bg-white shadow-md p-4 rounded-lg lg:space-x-8 lg:flex">
+                <div>
+                    <img class="w-full" src="./assets/noakhali.png" alt="Donation 1">
+                </div>
+                <div class="flex-1 space-y-5 mt-5 lg:mt-0">
+                    <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-5">
+                        <img src="./assets/coin.png" alt="">
+                        <span>1000 BDT</span>
+                    </button>
+                    <p class="text-[#111111] font-extrabold">Donate for Flood at Noakhali, Bangladesh</p>
+                    
+                    <p class="capitalize text-[#111111]"> 
+                     the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
+                     </p>
+                    <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
+                    <button type="button" class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
+                </div>
             </div>
 
-        </div>
+            
+            <div class="bg-white shadow-md p-4 rounded-lg lg:space-x-8 lg:flex">
+                <div>
+                    <img class="w-full" src="./assets/feni.png" alt="Donation 1">
+                </div>
+                <div class="flex-1 space-y-7 mt-5 lg:mt-0">
+                    <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-5">
+                        <img src="./assets/coin.png" alt="">
+                        <span>1000 BDT</span>
+                    </button>
+                        <p class="text-[#111111] font-extrabold">Donate for Flood Relief in Feni , Bangladesh</p>
 
-
-        <div class="bg-white shadow-md p-4 rounded-lg mb-4  lg:space-x-8 lg:flex">
-        
-            <div class="">
-            <img class="w-full" src="./assets/feni.png" alt="Donation 1" class="w-6/12 h-16 mr-4">
-
+                    <p class="capitalize text-[#111111]"> 
+                     the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
+                     </p>
+                    <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
+                    <button type="button" class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
+                </div>
             </div>
 
-            <div class="flex-1 space-y-11 mt-5 lg:mt-0">
-            <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-3">
-                <img src="./assets/coin.png" alt="">
-                <span>2000 BDT</span>
-            </button>
-            <p class="text-[#111111] font-extrabold">Donate for Flood Relief in Feni , Bangladesh</p>
-            <p class="capitalize text-[#111111]"> 
-                the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
-            </p>
-            <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
-            <button class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
+            
+<div class="bg-white shadow-md p-4 rounded-lg mb-4  lg:space-x-8 lg:flex">
+
+    <div class="">
+    <img class="w-full h-full" src="./assets/quota-protest.png" alt="Donation 1" class="w-6/12 h-16 mr-4">
+    
+    </div>
+    
+    <div class="flex-1 space-y-11 mt-5 lg:mt-0">
+    <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-3">
+        <img src="./assets/coin.png" alt="">
+        <span>3000 BDT</span>
+    </button>
+    <p class="text-[#111111] font-extrabold">Aid for injured in the Quota Movement, Bangladesh</p>
+    
+    <p class="capitalize text-[#111111]"> 
+        the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
+    </p>
+    
+    <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
+    <button class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
+    </div>
+    
+    </div>
+    
+    
+            
         </div>
-
-    </div>
-
-
-    <div class="bg-white shadow-md p-4 rounded-lg mb-4  lg:space-x-8 lg:flex">
-        
-        <div class="">
-        <img class="w-full h-full" src="./assets/quota-protest.png" alt="Donation 1" class="w-6/12 h-16 mr-4">
-
-        </div>
-
-        <div class="flex-1 space-y-11 mt-5 lg:mt-0">
-        <button class="text-lg bg-[#F3F3F3] p-3 font-semibold flex space-x-3">
-            <img src="./assets/coin.png" alt="">
-            <span>3000 BDT</span>
-        </button>
-        <p class="text-[#111111] font-extrabold">Aid for injured in the Quota Movement, Bangladesh</p>
-        <p class="capitalize text-[#111111]"> 
-            the recent quota movement has resulted in numerous injuries and significant hardship for many individuals.yout support is crucial in providing medical assistance, rehabilitation, and necessary suppliesto those affected by contributing yu help ensure that injured individuals receive the care and support they need during this challenging time every donation plays a vital role in alleviating their suffering and aiding in their recovery please considar making a donation to support these brave individuals in their time of need.
-        </p>
-        <input type="number" class="input input-bordered w-full mt-2" placeholder="Write Donation Amount">
-        <button class="donate-button btn font-extrabold bg-[#B4F461] w-full mt-2">Donate Now</button>
-    </div>
-
-    </div>
-
-
-
-    </div>
-
-    <!-- donation section end  -->
-
-
-
-        <!-- history section start  -->
 
         <div id="historySection" class="p-4 hidden">
             <h2 class="text-2xl font-bold mb-4">Donation History</h2>
             <div id="historyList" class="space-y-4"></div>
         </div>
-        
 
-        <!-- history section end  -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box text-center">
+                <h3 class="text-2xl font-extrabold">Congratulations!</h3>
+                <img class="m-auto" src="./assets/coin.png" alt="">
+                <p class="py-4 font-medium">You have donated for humankind</p>
+                <p class="font-extrabold">Successfully</p>
+                <div class="modal-action flex justify-center">
+                    <button class="btn" id="closeModalButton">Close Confirmation</button>
+                </div>
+            </div>
+        </dialog>
+    </main>
 
+    <footer class="bg-[#f9f7f3] mt-10 p-16"></footer>
 
-            
-
-        
-        <!-- notification Modal start  -->
-    <button class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
-    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-    <div class="modal-box text-center">
-    <h3 class="text-2xl font-extrabold">Congrates!</h3>
-    <img class="m-auto" src="./assets/coin.png" alt="">
-    <p class="py-4 font-medium">you have donated for humankind</p>
-    <p class="font-extrabold">Successfully</p>
-    <div class="modal-action">
-    <form method="dialog">
-        <button class="btn ">Close</button>
-    </form>
-    </div>
-    </div>
-    </dialog>
-
-        <!-- notification Modal end  -->
-
-
-
-
-            </main>
-            <!-- main section end  -->
-
-
-
-          
-  <!-- footer section start  -->
-   <footer class="bg-[#f9f7f3] mt-10 p-16">
-
-   </footer>
-  <!-- footer section end  -->
-
-
-
-
-            <script src="index.js"></script>
-        </body>
-
-
-
-        </html>
+    <script src="index.js"></script>
+    </body>
+    </html>
