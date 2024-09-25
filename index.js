@@ -1,4 +1,3 @@
- let accountBalance = 5500;
 let historyList = document.getElementById('historyList');
 let accountBalanceDisplay = document.getElementById('accountBalance');
 let modal = document.getElementById('my_modal_5');
@@ -8,18 +7,20 @@ const donationButton = document.getElementById('donationButton');
 const historyButton = document.getElementById('historyButton');
 const blogButton = document.getElementById('blogButton');
 
+let accountBalance = parseInt(accountBalanceDisplay.textContent, 10);
+
+updateAccountBalanceDisplay();
+
 donationButton.addEventListener('click', function() {
     toggleVisibility('donationSection', 'historySection', donationButton);
 });
 
 historyButton.addEventListener('click', function() {
     toggleVisibility('historySection', 'donationSection', historyButton);
-    displayHistory(); 
+    displayHistory();
 });
 
 
-
-// Donation buttons
 let donateButtons = document.querySelectorAll('.donate-button');
 for (const button of donateButtons) {
     button.addEventListener('click', function(event) {
@@ -31,6 +32,15 @@ function toggleVisibility(showId, hideId, activeButton) {
     document.getElementById(showId).style.display = 'block';
     document.getElementById(hideId).style.display = 'none';
     highlightActiveButton(activeButton);
+}
+
+function updateAccountBalance(amount) {
+    accountBalance -= amount;
+    updateAccountBalanceDisplay();
+}
+
+function updateAccountBalanceDisplay() {
+    accountBalanceDisplay.textContent = accountBalance + " BDT";
 }
 
 function processDonation(card) {
@@ -50,24 +60,16 @@ function processDonation(card) {
         return;
     }
 
-    // Update the account balance
-    accountBalance -= donationAmount;
-    accountBalanceDisplay.textContent = accountBalance + " BDT";
-
-    
+    updateAccountBalance(donationAmount);
     currentAmount += donationAmount;
     currentAmountElem.textContent = currentAmount + " BDT";
-
-
     addToHistory(donationTitle, donationAmount);
-
-
     donationInput.value = '';
 
     modal.showModal();
 }
 
-// Close modal
+
 closeModalButton.addEventListener('click', function() {
     modal.close();
 });
@@ -81,13 +83,12 @@ function addToHistory(title, amount) {
         <p>Amount: ${amount} BDT</p>
         <p>Date: ${date}</p>
     `;
-    historyList.prepend(historyCard); 
-     
+    historyList.prepend(historyCard);
 }
 
 function displayHistory() {
     if (historyList.children.length === 0) {
-        historyList.innerHTML = ``;
+        historyList.innerHTML = '';
     }
 }
 
