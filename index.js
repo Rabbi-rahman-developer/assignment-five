@@ -1,4 +1,4 @@
-let accountBalance = 5500;
+ let accountBalance = 5500;
 let historyList = document.getElementById('historyList');
 let accountBalanceDisplay = document.getElementById('accountBalance');
 let modal = document.getElementById('my_modal_5');
@@ -8,7 +8,6 @@ const donationButton = document.getElementById('donationButton');
 const historyButton = document.getElementById('historyButton');
 const blogButton = document.getElementById('blogButton');
 
-// Click event using addEventListener
 donationButton.addEventListener('click', function() {
     toggleVisibility('donationSection', 'historySection', donationButton);
 });
@@ -18,10 +17,7 @@ historyButton.addEventListener('click', function() {
     displayHistory(); 
 });
 
-// Blog button click event
-blogButton.addEventListener('click', function() {
-    window.location.href = 'blog.html'; 
-});
+
 
 // Donation buttons
 let donateButtons = document.querySelectorAll('.donate-button');
@@ -58,17 +54,16 @@ function processDonation(card) {
     accountBalance -= donationAmount;
     accountBalanceDisplay.textContent = accountBalance + " BDT";
 
-    // Update the total amount on the button
+    
     currentAmount += donationAmount;
     currentAmountElem.textContent = currentAmount + " BDT";
 
-    // Add to donation history
+
     addToHistory(donationTitle, donationAmount);
 
-    // Clear the input field
+
     donationInput.value = '';
 
-    // Show the modal after successfully processing the donation
     modal.showModal();
 }
 
