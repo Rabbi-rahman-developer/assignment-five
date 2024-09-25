@@ -7,7 +7,7 @@ const donationButton = document.getElementById('donationButton');
 const historyButton = document.getElementById('historyButton');
 const blogButton = document.getElementById('blogButton');
 
-let accountBalance = parseInt(accountBalanceDisplay.textContent, 10);
+let accountBalance = parseFloat(accountBalanceDisplay.textContent, 10);
 
 updateAccountBalanceDisplay();
 
@@ -18,6 +18,7 @@ donationButton.addEventListener('click', function() {
 historyButton.addEventListener('click', function() {
     toggleVisibility('historySection', 'donationSection', historyButton);
     displayHistory();
+    
 });
 
 
